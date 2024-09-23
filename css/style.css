@@ -1,0 +1,303 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: transparent;
+  color: #333;
+  position: relative;
+}
+
+#animated-bg img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Scroll Animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header */
+.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+marquee strong {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Transparent Main Sections */
+.transparent-section {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Navbar */
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #333;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+  display: none; /* Keep it hidden by default */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+  border: 1px solid #ccc;
+}
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+
+
+.dropdown-content {
+  display: none; /* Hide dropdown by default */
+}
+
+
+.dropdown-content li a {
+  padding: 10px;
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  background-color: #ddd;
+}
+
+/* Slider */
+.slider img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Event Boxes */
+.event-boxes {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.event-box {
+  width: 30%;
+  background-color: #ffefc1;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Scroll Boxes */
+.scroll-box {
+  height: 150px;
+  overflow: hidden;
+  padding: 10px;
+  background-color: #f0f0f0;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-box p {
+  white-space: nowrap;
+  animation: scroll-up 10s linear infinite;
+  font-weight: bold;
+}
+
+.scroll-box:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* About Section */
+.about-section {
+  padding: 40px 0;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-us-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.about-us-text {
+  max-width: 50%;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-sect {
+  margin: 10px 0;
+}
+
+.footer-sect img.small-img {
+  width: 20px;
+  height: auto;
+}
+
+/* News Box */
+#recent-events {
+  height: 80px; /* Adjust for desired height */
+  overflow: hidden;
+  padding: 5px;
+  background-color: #ffefc1;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Awards and Chairman Section */
+.chairman ul,
+.awards ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}
+
+.chairman li,
+.awards li {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.campus-img img,
+.awards img,
+.chairman img {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  border: 2px solid #4CAF50; /* Border around images */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Behind all content */
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
+  color: #333;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  z-index: 1; /* Ensure content is above the video */
+}
+
+.header, .navbar, .footer {
+  position: relative; /* Keep these above the video */
+  z-index: 1;
+}
+body {
+  cursor: url('sword.jpg') 16 16, auto;
+}
+.awards-list {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display items in a row */
+  justify-content: center; /* Align images horizontally at the center */
+  gap: 20px; /* Add space between images */
+  padding: 0; /* Remove default padding */
+}
+
+.awards-list li {
+  flex: 1; /* Make each list item the same width */
+  max-width: 200px; /* Set a maximum width for the images (adjust as needed) */
+}
+
+.awards-list img {
+  width: 100%; /* Make the image take up full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop the images to make them squared */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+.event {
+  background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+  padding: 20px;
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+.awards-list {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display items in a row */
+  justify-content: center; /* Align images horizontally at the center */
+  gap: 20px; /* Add space between images */
+  padding: 0; /* Remove default padding */
+}
+
+.awards-list li {
+  flex: 1; /* Make each list item the same width */
+  max-width: 200px; /* Set a maximum width for the images (adjust as needed) */
+}
+
+.awards-list img {
+  width: 100%; /* Make the image take up full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop the images to make them squared */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
